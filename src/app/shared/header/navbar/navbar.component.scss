@@ -1,0 +1,12 @@
+@import "../../../../styles.scss";
+
+nav {
+    @include dFlex($jc: space-between, $g: 2rem);
+    a {
+        font-size: 1.5rem;
+        transition: all 100ms ease-in-out;
+        &:hover {
+            color: $primary;
+        }
+    }
+}

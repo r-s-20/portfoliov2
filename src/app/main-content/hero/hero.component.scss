@@ -1,4 +1,34 @@
+@import "../../../styles.scss";
+
 img {
-    height: 230px;
-    object-fit: contain;
+  height: 500px;
+  object-fit: contain;
+}
+
+.heroContent {
+  @include dFlex($fd: column, $g: 3rem);
+}
+
+.description-outer {
+  @include dFlex($g: 0);
+  h2 {
+    margin: 0;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 3rem;
+    color: $secondary;
+    text-transform: uppercase;
+  }
+}
+
+span {
+  rotate: -90deg;
+  font-size: 3.5rem;
+  font-weight: 100;
+  font-stretch: expanded;
+  flex: 1;
 }

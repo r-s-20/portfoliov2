@@ -1,0 +1,9 @@
+@import "../../../styles.scss";
+
+header {
+    width: 100%;
+    font-size: 2rem;
+    padding: 2.2rem 8rem;
+    font-weight: bold;
+    @include dFlex($jc: space-between);
+}
