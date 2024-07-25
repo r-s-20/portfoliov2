@@ -1,5 +1,10 @@
 @import "../../../styles.scss";
 
+section {
+  background-color: black;
+  background-image: url("/img/28.\ Hero\ Background.svg")
+}
+
 img {
   height: 500px;
   object-fit: contain;
