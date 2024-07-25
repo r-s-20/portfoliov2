@@ -41,16 +41,25 @@ a {
   color: white;
 }
 
+h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
 .button {
   cursor: pointer;
   padding: 1rem 2rem;
   background-color: $primary;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: white;
   border: none;
   border-radius: 10px;
   &:hover {
     background-color: $secondary;
     scale: 1.1;
+  }
+  &:active {
+    background-color: white;
+    color: black;
   }
 }
