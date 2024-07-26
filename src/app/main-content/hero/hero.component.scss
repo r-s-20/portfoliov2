@@ -1,20 +1,44 @@
 @import "../../../styles.scss";
 
 section {
-  background-color: black;
-  background-image: url("/img/28.\ Hero\ Background.svg")
+  // background-color: pink;
+  width: 100%;
+  @include dFlex($jc: space-around);
+  background-position: left top;
+  background-image: url("/img/28.\ Hero\ Background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-attachment:fixed ;
+  min-height: 800px;
+  height: calc(100vh - 120px);
+  // margin-bottom: 0;
+  // padding-top: 2rem;
+  // max-width: unset;
 }
 
-img {
-  height: 500px;
-  object-fit: contain;
+.photoContainer {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  // background-color: white;
+  img {
+    position: absolute;
+    // top: 10%;
+    left: 5%;
+    object-fit: contain;
+    &:last-child {
+      height: 500px;
+      left: 10%;
+      top: unset;
+    }
+  }
 }
 
 .heroContent {
   @include dFlex($fd: column, $g: 3rem);
 }
 
-.description-outer {
+.heroText {
   @include dFlex($g: 0);
   h2 {
     margin: 0;

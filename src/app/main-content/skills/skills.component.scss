@@ -1,0 +1,32 @@
+@import "../../../styles.scss";
+
+h2,
+h3 {
+  margin: 0;
+}
+
+.skillsContainer {
+  @include dFlex($ai: flex-start);
+}
+
+.iconContainer {
+  width: 60%;
+  max-width: 740px;
+  @include dFlex($g: 5rem);
+  flex-wrap: wrap;
+  padding: 0 3rem;
+
+  .iconElement {
+    @include dFlex($fd: column);
+  }
+}
+
+.textContainer {
+  width: 40%;
+  h3 {
+    font-size: 2rem;
+    span {
+      color: $secondary;
+    }
+  }
+}

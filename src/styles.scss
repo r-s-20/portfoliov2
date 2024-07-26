@@ -1,5 +1,6 @@
 $primary: rgba(112, 230, 28, 1);
 $secondary: rgba(151, 71, 255, 1);
+$background: rgba(20, 29, 47, 1);
 
 @font-face {
   font-family: Poppins;
@@ -21,7 +22,7 @@ $secondary: rgba(151, 71, 255, 1);
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
-  background-color: rgba(20, 29, 47, 1);
+  background-color: $background;
   ;
   color: white;
   font-size: 16px;
@@ -33,8 +34,10 @@ body {
 }
 
 section {
-  // background-color: pink;
+  background-color: $background;
   @include dFlex();
+  max-width: 1920px;
+  margin-bottom: 5rem;
 }
 
 a {
