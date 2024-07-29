@@ -1,0 +1,30 @@
+@import "../../../styles.scss";
+
+section {
+  flex-direction: column;
+}
+
+.contactContent {
+  @include dFlex();
+  width: 100%;
+  background-color: green;
+}
+
+.textContent {
+  background-color: blue;
+  width: 50%;
+}
+
+.contactForm {
+  background-color: pink;
+  @include dFlex($fd: column);
+  width: 50%;
+  input[type="text"], textArea {
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+  }
+//   input:type=Text {
+//     width: unset;
+//   }
+}
