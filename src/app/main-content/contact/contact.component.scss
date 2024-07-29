@@ -7,24 +7,44 @@ section {
 .contactContent {
   @include dFlex();
   width: 100%;
-  background-color: green;
 }
 
 .textContent {
-  background-color: blue;
   width: 50%;
 }
 
 .contactForm {
-  background-color: pink;
   @include dFlex($fd: column);
   width: 50%;
-  input[type="text"], textArea {
+  input[type="text"],
+  textArea {
     width: 80%;
-    border: none;
+    resize: none;
+    border: 1px solid $secondary;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    font-family: Poppins;
     border-radius: 10px;
+    &:hover {
+      border-color: $primary;
+    }
   }
-//   input:type=Text {
-//     width: unset;
-//   }
+}
+
+.policyCheck {
+  @include dFlex($jc: space-around);
+  .checkbox {
+    .checkboxHover {
+      display: none;
+    }
+    &:hover {
+      .checkboxHover {
+        display: unset;
+      }
+    }
+  }
+}
+
+span {
+  width: 90%;
 }
