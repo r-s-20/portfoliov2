@@ -1,11 +1,16 @@
 $primary: rgba(112, 230, 28, 1);
 $secondary: rgba(151, 71, 255, 1);
 $background: rgba(20, 29, 47, 1);
-$mainFont: Poppins, sans-serif;
+$mainFont: Quantico, sans-serif;
 
 @font-face {
   font-family: Poppins;
   src: url(/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Quantico;
+  src: url(/fonts/quantico/Quantico-Regular.ttf);
 }
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $g: 16px) {
