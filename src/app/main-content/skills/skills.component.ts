@@ -39,6 +39,14 @@ export class SkillsComponent {
       name: 'git',
       icon: 'img/icons/git.svg',
     },
+    {
+      name: 'API',
+      icon: 'img/icons/api.svg',
+    },
+    {
+      name: 'Scrum',
+      icon: 'img/icons/scrum.svg',
+    },
   ];
 
   constructor() {}

@@ -4,10 +4,6 @@ section {
   // background-color: pink;
   width: 100%;
   @include dFlex($jc: space-around);
-  background-position: left top;
-  background-image: url("/img/28.\ Hero\ Background.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
   // background-attachment:fixed ;
   min-height: 800px;
   height: calc(100vh - 120px);
@@ -16,21 +12,31 @@ section {
   // max-width: unset;
 }
 
+.backgroundCurve {
+  background-image: url("/img/28.\ Hero\ Background.svg");
+  background-repeat: no-repeat;
+  background-size: left;
+  z-index: 5;
+}
+
+.backgroundShadows {
+  background-image: url("/img/29.\ photo\ shadows.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  z-index: -5;
+}
+
 .photoContainer {
   position: relative;
   width: 50%;
   height: 100%;
-  // background-color: white;
-  img {
+  #heroPhoto {
     position: absolute;
-    // top: 10%;
-    left: 5%;
+    // background-color: white;
     object-fit: contain;
-    &:last-child {
-      height: 500px;
-      left: 10%;
-      top: unset;
-    }
+    height: 500px;
+    left: 15%;
+    z-index: 0;
   }
 }
 
