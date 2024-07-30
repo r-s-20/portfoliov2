@@ -1,6 +1,7 @@
 $primary: rgba(112, 230, 28, 1);
 $secondary: rgba(151, 71, 255, 1);
 $background: rgba(20, 29, 47, 1);
+$mainFont: Poppins, sans-serif;
 
 @font-face {
   font-family: Poppins;
@@ -21,7 +22,7 @@ $background: rgba(20, 29, 47, 1);
 
 body {
   margin: 0;
-  font-family: Poppins, sans-serif;
+  font-family: $mainFont;
   background-color: $background;
   ;
   color: white;
@@ -58,6 +59,7 @@ h2 {
   color: white;
   border: none;
   border-radius: 10px;
+  transition: all 25ms ease-in-out;
   &:hover {
     background-color: $secondary;
     scale: 1.1;
