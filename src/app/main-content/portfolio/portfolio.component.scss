@@ -1,0 +1,32 @@
+@import "../../../styles.scss";
+
+section {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+table {
+  border-collapse: collapse;
+  cursor: pointer;
+  width: 70%;
+  font-size: 1.1rem;
+  tr {
+    transition: all 125ms ease-out;
+    border-top: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+    &:hover {
+      background-color: rgba(61, 207, 182, 0.3);
+    }
+    td {
+      padding: 2.5rem 2rem;
+      &:first-child {
+        font-size: 1.5rem;
+        font-family: $fontSecondary;
+        font-weight: 700;
+      }
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}

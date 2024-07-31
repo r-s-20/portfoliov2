@@ -1,1 +1,16 @@
-<section><h2 id="portfolio">Portfolio</h2></section>
+<section id="portfolio">
+  <span>Portfolio</span>
+  <h2>Featured Projects</h2>
+  <p>
+    Explore a selection of my work here - interact with projects to see my
+    skills in action
+  </p>
+    <table>
+      @for(project of projects; track $index) {
+      <tr>
+        <td>{{ project.name }}</td>
+        <td>{{ project.skills }}</td>
+      </tr>
+      }
+    </table>
+</section>
