@@ -1,16 +1,17 @@
 $primary: rgba(112, 230, 28, 1);
 $secondary: rgba(151, 71, 255, 1);
 $background: rgba(20, 29, 47, 1);
-$mainFont: Poppins, sans-serif;
+$fontMain: Karla, sans-serif;
+$fontSecondary: FiraCode, monospace;
 
 @font-face {
-  font-family: Poppins;
-  src: url(/fonts/Poppins/Poppins-Regular.ttf);
+  font-family: Karla;
+  src: url(/fonts/karla/Karla-Regular.ttf);
 }
 
 @font-face {
-  font-family: Quantico;
-  src: url(/fonts/quantico/Quantico-Regular.ttf);
+  font-family: FiraCode;
+  src: url(fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
 }
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $g: 16px) {
@@ -27,7 +28,7 @@ $mainFont: Poppins, sans-serif;
 
 body {
   margin: 0;
-  font-family: $mainFont;
+  font-family: $fontMain;
   background-color: $background;
   color: white;
   font-size: 16px;
@@ -54,6 +55,7 @@ a {
 }
 
 h2 {
+  font-family: $fontSecondary;
   font-size: 4rem;
   font-weight: bold;
 }
