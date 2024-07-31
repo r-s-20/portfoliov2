@@ -1,9 +1,28 @@
+@import "../../../styles.scss";
+
 section {
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.outerText {
+  @include dFlex($fd: column, $ai: flex-start);
+  width: 50%;
+  margin-top: 20%;
+  span {
+    color: $primary;
+    font-size: 1.2rem;
+  }
 }
 
 .aboutContent {
-  width: 50%;
   font-size: 1.2rem;
   max-width: 830px;
+  h2 {
+    margin: 0;
+  }
 }

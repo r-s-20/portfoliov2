@@ -1,6 +1,7 @@
-$primary: rgba(112, 230, 28, 1);
-$secondary: rgba(151, 71, 255, 1);
-$background: rgba(20, 29, 47, 1);
+$primary: rgba(61, 207, 182, 1);
+$secondary: rgba(106, 215, 191, 1);
+$background: black;
+$fontColor: white;
 $fontMain: Karla, sans-serif;
 $fontSecondary: FiraCode, monospace;
 
@@ -11,7 +12,7 @@ $fontSecondary: FiraCode, monospace;
 
 @font-face {
   font-family: FiraCode;
-  src: url(fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
+  src: url(/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
 }
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $g: 16px) {
@@ -41,7 +42,7 @@ body {
 
 section {
   width: 100%;
-  border: 2px solid white;
+  // border: 2px solid white;
   background-color: $background;
   @include dFlex();
   padding: 0 4rem;
@@ -50,33 +51,44 @@ section {
 }
 
 a {
+  font-family: $fontSecondary;
   text-decoration: none;
   color: white;
+  font-weight: 400;
 }
 
 h2 {
   font-family: $fontSecondary;
   font-size: 4rem;
   font-weight: bold;
+  color: $primary;
 }
 
 .button {
   cursor: pointer;
+  background: none;
   padding: 1rem 2rem;
-  background-color: $primary;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: white;
-  border: none;
-  border-radius: 10px;
+  border: 1px solid white;
+  border-radius: 100px;
   transition: all 25ms ease-in-out;
   &:hover {
-    background-color: $secondary;
-    scale: 1.1;
+    color: $primary;
+    border-color: $primary;
   }
   &:active {
-    background-color: white;
-    color: black;
+    color: $primary;
+    border-color: $primary;
   }
+}
+
+.textBox {
+  @include dFlex($fd: column, $ai: flex-start);
+  border: 1px solid $primary;
+  background-color: rgba(61, 207, 182, 0.2);
+  border-radius: 30px;
+  padding: 2rem;
 }
 
 .d-none {
