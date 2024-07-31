@@ -2,28 +2,49 @@
 
 section {
   // background-color: pink;
+  position: relative;
   width: 100%;
-  @include dFlex($jc: space-around);
-  // background-attachment:fixed ;
+  @include dFlex($jc: flex-end);
   min-height: 800px;
   height: calc(100vh - 120px);
-  // margin-bottom: 0;
-  // padding-top: 2rem;
-  // max-width: unset;
 }
 
 .backgroundCurve {
   background-image: url("/img/28.\ Hero\ Background.svg");
   background-repeat: no-repeat;
-  background-size: left;
-  z-index: 5;
+  background-position: top center;
+  background-size: 100%;
+  position:absolute;
+  top: 15vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 85vh;
 }
 
 .backgroundShadows {
   background-image: url("/img/29.\ photo\ shadows.svg");
   background-repeat: no-repeat;
+  background-position: top left;
+  position:absolute;
+  top: 0;
+  left: 0;
+  margin-top: 10vh;
+  margin-left: -100px;
+  right: 0;
+  height: 90vh;
+}
+
+.backgroundPhoto {
+  background-image: url("/img/hero\ character\ photo.png");
+  background-repeat: no-repeat;
   background-position: left;
-  z-index: -5;
+  background-size: 70vh;
+  position:absolute;
+  top: 0;
+  left: 6vh;
+  right: 0;
+  height: 100vh;
 }
 
 .photoContainer {
@@ -34,18 +55,22 @@ section {
     position: absolute;
     // background-color: white;
     object-fit: contain;
-    height: 500px;
-    left: 15%;
+    // min-height: 60%;
+    min-width: 400px;
+    width: 65%;
+    left: 150px;
     z-index: 0;
   }
 }
 
 .heroContent {
+  z-index: 50;
   @include dFlex($fd: column, $g: 3rem);
 }
 
 .heroText {
   @include dFlex($g: 0);
+  z-index: 10;
   h2 {
     margin: 0;
   }

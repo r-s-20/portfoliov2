@@ -5,7 +5,7 @@ section {
 }
 
 .contactContent {
-  @include dFlex();
+  @include dFlex($jc: space-around);
   width: 100%;
 }
 

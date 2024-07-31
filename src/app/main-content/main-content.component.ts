@@ -5,13 +5,13 @@ import { AboutComponent } from "./about/about.component";
 import { HeroComponent } from "./hero/hero.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { ContactComponent } from "./contact/contact.component";
-import { TestimonialsComponent } from "./testimonials/testimonials.component";
 import { SkillsComponent } from "./skills/skills.component";
+import { ReferencesComponent } from "./references/references.component";
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [FooterComponent, HeaderComponent, AboutComponent, HeroComponent, PortfolioComponent, ContactComponent, TestimonialsComponent, SkillsComponent],
+  imports: [FooterComponent, HeaderComponent, AboutComponent, HeroComponent, PortfolioComponent, ContactComponent, SkillsComponent, ReferencesComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })

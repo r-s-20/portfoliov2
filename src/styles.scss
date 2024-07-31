@@ -1,7 +1,7 @@
 $primary: rgba(112, 230, 28, 1);
 $secondary: rgba(151, 71, 255, 1);
 $background: rgba(20, 29, 47, 1);
-$mainFont: Quantico, sans-serif;
+$mainFont: Poppins, sans-serif;
 
 @font-face {
   font-family: Poppins;
@@ -29,7 +29,6 @@ body {
   margin: 0;
   font-family: $mainFont;
   background-color: $background;
-  ;
   color: white;
   font-size: 16px;
   min-height: 100vh;
@@ -40,8 +39,11 @@ body {
 }
 
 section {
+  width: 100%;
+  border: 2px solid white;
   background-color: $background;
   @include dFlex();
+  padding: 0 4rem;
   max-width: 1920px;
   margin-bottom: 5rem;
 }
