@@ -66,24 +66,43 @@ h2 {
 }
 
 .button {
+  @include dFlex();
   cursor: pointer;
+  // width: fit-content;
   background: none;
   padding: 1rem 2rem;
-  font-size: 1.1rem;
-  color: white;
+  color: transparent;
   border: 1px solid white;
   border-radius: 100px;
-  transition: all 25ms ease-in-out;
+  transition: all 125ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+  span {
+    transition: all 125ms ease-in-out;
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    position: absolute;
+    text-wrap: nowrap;
+  }
   &:hover {
-    color: $primary;
+    span {
+      animation: loopText linear 3s infinite;
+      color: $primary;
+    }
     border-color: $primary;
   }
-  &:active {
-    color: $primary;
-    border-color: $primary;
-  }
+  // &:active {
+  // span {
+  //   background-color: turquoise;
+  //   color: white;
+  // }
+  // border-color: $primary;
+  // }
   &:disabled {
-    color: rgba(255, 255, 255, 0.8);
+    span {
+      color: rgba(255, 255, 255, 0.8);
+    }
     border-color: rgba(255, 255, 255, 0.5);
   }
 }
@@ -98,4 +117,28 @@ h2 {
 
 .d-none {
   display: none;
+}
+
+@keyframes loopText {
+  0% {
+    left: 0;
+  }
+  33% {
+    left: -200%;
+  }
+  33.1% {
+    left: 200%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes marqueeBasic {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
