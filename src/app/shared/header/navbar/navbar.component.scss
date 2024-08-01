@@ -1,12 +1,37 @@
 @import "../../../../styles.scss";
 
 nav {
-    @include dFlex($jc: space-between, $g: 2rem);
-    a {
-        font-size: 1.5rem;
-        transition: all 100ms ease-in-out;
-        &:hover {
-            color: $primary;
-        }
+  @include dFlex($jc: space-between, $g: 2rem);
+  a {
+    font-size: 1.5rem;
+    transition: all 100ms ease-in-out;
+    &:hover {
+      color: $primary;
     }
+  }
+}
+
+.langSwitchContainer {
+  cursor: pointer;
+  font-family: $fontSecondary;
+  background-color: transparent;
+  border: 1px solid $primary;
+  border-radius: 100px;
+  font-weight: 400;
+  color: rgba(61, 207, 182, 0.5);
+  &:hover {
+    color: $primary;
+    border: 1px solid white;
+  }
+  span {
+    padding: 0 0.8rem;
+  }
+  .langSelected {
+    font-weight: 700;
+    color: white;
+    background-color: $primary;
+    border: 1px solid $primary;
+    border-radius: 100px;
+    z-index: 50;
+  }
 }

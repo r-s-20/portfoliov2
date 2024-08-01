@@ -1,5 +1,9 @@
-<nav> 
-    <a href="#about">About me</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
+<nav>
+  <div class="langSwitchContainer" (click)="toggleLang()">
+    <span [ngClass]="{langSelected:lang=='EN'}">EN</span>
+    <span [ngClass]="{langSelected:lang=='DE'}">DE</span>
+  </div>
+  <a href="#about">About me</a>
+  <a href="#skills">Skills</a>
+  <a href="#portfolio">Portfolio</a>
 </nav>
