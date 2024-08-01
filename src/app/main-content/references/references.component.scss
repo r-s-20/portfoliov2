@@ -1,0 +1,53 @@
+@import "../../../styles.scss";
+
+section {
+  flex-direction: column;
+  gap: 2rem;
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.outerContainer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.textBoxContainer {
+  @include dFlex($jc: space-between, $g: 2rem);
+  width: 150%;
+  left: -25%;
+  position: relative;
+}
+
+.quoteIcon {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  z-index: 10;
+}
+
+.textBox {
+  position: relative;
+  width: 70%;
+  margin-top: 0.5rem;
+  min-height: 5rem;
+  &:first-child {
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+  &:last-child {
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+  }
+}
+
+.arrowContainer {
+  @include dFlex();
+  > img {
+    cursor: pointer;
+  }
+}
