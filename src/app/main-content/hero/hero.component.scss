@@ -68,5 +68,8 @@ app-header {
   // position: absolute;
   width: 100%;
   @include dFlex($jc: space-evenly);
+}
+
+.animate {
   animation: marqueeBasic linear 20s infinite;
 }
