@@ -1,4 +1,5 @@
 $primary: rgba(61, 207, 182, 1);
+// $primary: rgb(214, 51, 251);
 $secondary: rgba(106, 215, 191, 1);
 $background: black;
 $fontColor: white;
@@ -143,13 +144,21 @@ h2 {
   }
 }
 
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(20%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+}
 
 @media (max-width: 1000px) {
   section {
     border: 1px solid white;
     flex-direction: column;
     > * {
-      width:100%;
+      width: 100%;
     }
   }
 }
