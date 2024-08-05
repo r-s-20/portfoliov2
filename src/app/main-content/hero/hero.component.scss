@@ -49,6 +49,7 @@ app-header {
 }
 
 .marqueeBackground {
+  filter: blur(0.5);
   position: absolute;
   left: 0;
   bottom: 16%;
@@ -61,6 +62,7 @@ app-header {
   backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.12);
   rotate: -2deg;
+  z-index: 10;
 }
 
 .marquee {
@@ -69,5 +71,44 @@ app-header {
   // position: absolute;
   width: 100%;
   @include dFlex($jc: space-evenly);
+}
+
+.animate {
   animation: marqueeBasic linear 20s infinite;
+}
+
+.heroLine {
+  height: 100vh;
+  @include dFlex($fd: column, $jc: flex-end);
+  a {
+    &:hover {
+      filter: brightness(0.7);
+    }
+  }
+}
+
+.arrowDown {
+  border: 1px solid $primary;
+  border-radius: 100px;
+  padding: 1rem;
+}
+
+.moveUpDown {
+  animation: 1s moveUpDown 3s infinite;
+}
+
+.separatorLeft {
+  border-left: 1px solid $primary;
+  height: 30vh;
+}
+
+.heroMail {
+  rotate: -90deg;
+  margin-bottom: 5rem;
+}
+
+.separatorRight {
+  border-left: 1px solid rgba(255, 255, 255, 0.7);
+  height: 25vh;
+  
 }
