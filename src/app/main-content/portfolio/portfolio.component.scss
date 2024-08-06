@@ -30,3 +30,60 @@ table {
     }
   }
 }
+
+.popup-curtain {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include dFlex();
+  background-color: rgba(0, 0, 0, 0.418);
+  z-index: 100;
+}
+
+.popup-portfolio {
+  @include dFlex($jc: space-around);
+  height: 90%;
+  width: 90%;
+  border-radius: 30px;
+  border: 1px solid $primary;
+  background: linear-gradient(to left bottom, rgb(22, 73, 65), 45%, black);
+}
+
+.leftContainer {
+  height: 80vh;
+  background-color: grey;
+  @include dFlex($fd: column, $ai: flex-start, $jc: space-evenly);
+}
+
+.rightContainer {
+  height: 80vh;
+  @include dFlex($fd: column, $ai: flex-end, $jc: space-evenly);
+  button {
+    border: none;
+    background: none;
+    color: $primary;
+    @include dFlex();
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all 125ms ease-in-out;
+  }
+  .button-close {
+    font-size: 2rem;
+    color: white;
+    &:hover {
+      scale: 1.5;
+      color: $primary;
+    }
+  }
+  .button-next {
+    &:hover {
+      color: white;
+      svg {
+        transition: transform 125ms ease-in;
+        transform: translateX(15%);
+      }
+    }
+  }
+}

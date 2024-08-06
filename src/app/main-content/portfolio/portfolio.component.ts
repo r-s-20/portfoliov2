@@ -25,4 +25,14 @@ export class PortfolioComponent {
       url: '',
     },
   ];
+
+  closePopup(popupId:string){
+    let curtain = document.getElementById(popupId);
+    curtain?.classList.add("d-none");
+  }
+
+  showPopup(popupId:string){
+    let curtain = document.getElementById(popupId);
+    curtain?.classList.remove("d-none");
+  }
 }
