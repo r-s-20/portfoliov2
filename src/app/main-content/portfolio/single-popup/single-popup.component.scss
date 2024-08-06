@@ -1,0 +1,113 @@
+@import "../../../../styles.scss";
+
+.popup-curtain {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include dFlex();
+  background-color: rgba(0, 0, 0, 0.418);
+  z-index: 100;
+}
+
+.popup-portfolio {
+  @include dFlex($jc: space-around);
+  padding: 4rem;
+  height: 90%;
+  width: 90%;
+  border-radius: 30px;
+  border: 1px solid $primary;
+  background: linear-gradient(to left bottom, rgb(22, 73, 65), 45%, black);
+}
+
+.leftContainer {
+  width: 50%;
+  height: 80vh;
+  @include dFlex($fd: column, $ai: flex-start, $jc: space-evenly);
+  .popup-header {
+    @include dFlex($fd: column, $ai: flex-start, $jc: flex-start, $g: 0);
+  }
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+  }
+  h4 {
+    font-size: 6rem;
+    font-weight: 700;
+    color: $primary;
+  }
+  h3 {
+    font-size: 4rem;
+    font-family: $fontSecondary;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    color: $primary;
+    font-family: $fontSecondary;
+  }
+
+  .portfolio-skills {
+    @include dFlex();
+  }
+
+  .buttonContainer {
+    @include dFlex($g: 2rem);
+  }
+
+  a {
+    @include dFlex($g: 0.25rem);
+    padding: 0.8rem 1.5rem;
+    border: 1px solid white;
+    border-radius: 30px;
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+      img {
+        transition: transform 125ms ease-in-out;
+        transform: translate(20%, -10%);
+      }
+    }
+  }
+}
+
+.rightContainer {
+  width: 50%;
+  height: 80vh;
+  @include dFlex($fd: column, $ai: flex-end, $jc: space-between);
+  img {
+    width: 90%;
+  }
+  button {
+    border: none;
+    background: none;
+    color: $primary;
+    @include dFlex();
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all 125ms ease-in-out;
+  }
+  .button-close {
+    font-size: 2rem;
+    color: white;
+    &:hover {
+      scale: 1.5;
+      color: $primary;
+    }
+  }
+  .button-next {
+    img {
+      width: unset;
+    }
+    &:hover {
+      color: white;
+      svg,
+      img {
+        transition: transform 125ms ease-in;
+        transform: translateX(15%);
+      }
+    }
+  }
+}

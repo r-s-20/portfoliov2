@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PopupService } from '../../shared/services/popup.service';
+import { SinglePopupComponent } from './single-popup/single-popup.component';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [],
+  imports: [SinglePopupComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
+  popupService = inject(PopupService);
+
   projects = [
     {
       name: 'Join',
@@ -25,14 +29,4 @@ export class PortfolioComponent {
       url: '',
     },
   ];
-
-  closePopup(popupId:string){
-    let curtain = document.getElementById(popupId);
-    curtain?.classList.add("d-none");
-  }
-
-  showPopup(popupId:string){
-    let curtain = document.getElementById(popupId);
-    curtain?.classList.remove("d-none");
-  }
 }

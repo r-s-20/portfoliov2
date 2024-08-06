@@ -1,0 +1,46 @@
+<div class="popup-curtain d-none" id="{{ num }}">
+  <div class="popup-portfolio">
+    <div class="leftContainer">
+      <div class="popup-header">
+        <h4>0{{ num +1 }}</h4>
+        <h3>{{ portfolio.title }}</h3>
+      </div>
+      <article>
+        <h5>What is this project about?</h5>
+        <p>
+          {{ portfolio.description }}
+        </p>
+      </article>
+
+      <div class="portfolio-skills">
+        @for (skill of portfolio.skills; track $index) {
+        <span>{{ skill }}</span>
+        }
+      </div>
+      <div class="buttonContainer">
+        <a href="{{ portfolio.github }}"
+          >Github
+          <img src="/img/icons/arrow_outward.svg" alt="arrow to upper left" />
+        </a>
+        <a href="{{ portfolio.livetest }}"
+          >Livetest
+          <img src="/img/icons/arrow_outward.svg" alt="arrow to upper left" />
+        </a>
+      </div>
+    </div>
+    <div class="rightContainer">
+      <button class="button-close" (click)="popupService.closePopup(num)">
+        x
+      </button>
+      <img
+        src="/img/previewJoin.svg"
+        alt="preview of Join, showing a Kanban-board with four columns and different tasks"
+      />
+      <button (click)="popupService.showNext(num)" class="button-next">
+        Next project
+        <img src="/img/icons/arrow-right-green.svg" alt="" />
+        
+      </button>
+    </div>
+  </div>
+</div>
