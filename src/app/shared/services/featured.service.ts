@@ -4,7 +4,7 @@ import { SinglePortfolioInterface } from '../interfaces/single-portfolio.interfa
 @Injectable({
   providedIn: 'root',
 })
-export class PopupService {
+export class FeaturedService {
   portfolios: SinglePortfolioInterface[] = [
     {
       title: 'Join',
@@ -12,6 +12,8 @@ export class PopupService {
       skills: ['CSS', 'HTML', 'Javascript', 'Firebase'],
       github: '',
       livetest: '',
+      image: 'img/previewJoin.svg',
+      url: '',
     },
     {
       title: 'Sharky',
@@ -19,6 +21,17 @@ export class PopupService {
       skills: ['CSS', 'HTML', 'Javascript'],
       github: '',
       livetest: '',
+      image: 'img/previewJoin.svg',
+      url: '',
+    },
+    {
+      title: 'Pokedex',
+      description: `Get information on Pokemon provided by the pokedex API`,
+      skills: ['Rest-API', 'CSS', 'HTML', 'Javascript'],
+      github: '',
+      livetest: '',
+      image: 'img/previewJoin.svg',
+      url: '',
     },
   ];
   constructor() {}

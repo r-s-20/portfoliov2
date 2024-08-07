@@ -29,14 +29,14 @@
       </div>
     </div>
     <div class="rightContainer">
-      <button class="button-close" (click)="popupService.closePopup(num)">
+      <button class="button-close" (click)="featured.closePopup(num)">
         x
       </button>
       <img
-        src="img/previewJoin.svg"
+        src="{{portfolio.image}}"
         alt="preview of Join, showing a Kanban-board with four columns and different tasks"
       />
-      <button (click)="popupService.showNext(num)" class="button-next">
+      <button (click)="featured.showNext(num)" class="button-next">
         Next project
         <img src="img/icons/arrow-right-green.svg" alt="" />
         

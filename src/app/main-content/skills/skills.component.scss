@@ -27,8 +27,19 @@ h3 {
   }
 }
 
-.textContainer {
+.outerText {
+  @include dFlex($fd: column, $ai: flex-start);
   width: 45%;
+  // margin-top: 20%;
+  span {
+    color: $primary;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+.textContainer {
+  width: 100%;
   h3 {
     font-size: 1.5rem;
     font-family: $fontSecondary;

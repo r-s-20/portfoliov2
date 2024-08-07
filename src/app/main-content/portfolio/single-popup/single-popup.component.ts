@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { PopupService } from '../../../shared/services/popup.service';
+import { FeaturedService } from '../../../shared/services/featured.service';
 import { SinglePortfolioInterface } from '../../../shared/interfaces/single-portfolio.interface';
 
 @Component({
@@ -17,6 +17,8 @@ export class SinglePopupComponent {
     skills: [''],
     github: '',
     livetest: '',
+    image: '',
+    url: '',
   };
-  popupService = inject(PopupService);
+  featured = inject(FeaturedService);
 }

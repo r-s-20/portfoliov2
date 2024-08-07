@@ -1,5 +1,7 @@
 <section id="skills">
   <!-- <div class="skillsContainer"> -->
+  <div class="outerText">
+    <span>Technologies</span>
     <div class="textContainer textBox">
       <h2>Skill set</h2>
       <p>
@@ -15,13 +17,14 @@
       </p>
       <button class="button">Let's talk<span>Let's talk</span></button>
     </div>
-    <div class="iconContainer">
-      @for (skill of skills; track skill.name) {
-      <div class="iconElement">
-        <img src="{{ skill.icon }}" alt="" />
-        <span>{{ skill.name }}</span>
-      </div>
-      }
+  </div>
+  <div class="iconContainer">
+    @for (skill of skills; track skill.name) {
+    <div class="iconElement">
+      <img src="{{ skill.icon }}" alt="" />
+      <span>{{ skill.name }}</span>
     </div>
+    }
+  </div>
   <!-- </div> -->
 </section>

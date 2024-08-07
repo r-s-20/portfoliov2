@@ -3,5 +3,7 @@ export interface SinglePortfolioInterface {
   description: string;
   skills: string[];
   github: string;
+  image: string;
   livetest: string;
+  url: string;
 }

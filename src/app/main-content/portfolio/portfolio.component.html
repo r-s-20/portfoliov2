@@ -6,17 +6,21 @@
     skills in action
   </p>
   <table>
-    @for(project of projects; track $index) {
-    <tr (click)="popupService.showPopup($index)">
-      <td>{{ project.name }}</td>
-      <td>{{ project.skills }}</td>
+    @for(project of featured.portfolios; track $index) {
+    <tr (click)="featured.showPopup($index)">
+      <td>{{ project.title }}</td>
+      <td>
+        @for(skill of project.skills; track $index) {
+        <span>{{ skill }}</span>
+        @if($index < project.skills.length-1) {
+        <span class="projects-separator"> | </span>
+
+        } }
+      </td>
     </tr>
     }
   </table>
-  @for(portfolio of popupService.portfolios; track $index) {
-  <app-single-popup
-    [portfolio]="portfolio"
-    [num]="$index"
-  ></app-single-popup>
+  @for(project of featured.portfolios; track $index) {
+  <app-single-popup [portfolio]="project" [num]="$index"></app-single-popup>
   }
 </section>

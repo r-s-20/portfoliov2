@@ -15,11 +15,11 @@ interface skill {
 export class SkillsComponent {
   skills: skill[] = [
     {
-      name: 'html',
+      name: 'HTML',
       icon: 'img/icons/html.svg',
     },
     {
-      name: 'css',
+      name: 'CSS',
       icon: 'img/icons/css.svg',
     },
     {
@@ -35,11 +35,11 @@ export class SkillsComponent {
       icon: 'img/icons/angular.svg',
     },
     {
-      name: 'git',
+      name: 'GIT',
       icon: 'img/icons/git.svg',
     },
     {
-      name: 'API',
+      name: 'Rest-API',
       icon: 'img/icons/api.svg',
     },
     {
