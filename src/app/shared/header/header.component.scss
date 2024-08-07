@@ -5,6 +5,19 @@ header {
     font-size: 2rem;
     padding: 3rem 4rem;
     font-weight: bold;
+    z-index: 5;
     @include dFlex($jc: space-between);
 }
 
+@media (max-width: 780px) {
+    header {
+      padding: 3rem 2rem;
+    }
+  }
+
+@media (max-width: 580px) {
+    header {
+        padding: 3rem 1rem;
+      }
+  }
+  

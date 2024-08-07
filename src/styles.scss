@@ -42,7 +42,6 @@ body {
 
 section {
   width: 100%;
-  // border: 2px solid white;
   background-color: $background;
   @include dFlex();
   padding: 0 4rem;
@@ -68,7 +67,6 @@ h2 {
 .button {
   @include dFlex();
   cursor: pointer;
-  // width: fit-content;
   background: none;
   padding: 1rem 2rem;
   color: transparent;
@@ -163,7 +161,7 @@ h2 {
 @media (max-width: 1000px) {
   section {
     padding: 0 2rem;
-    // border: 1px solid pink;
+    border: 1px solid pink;
     flex-direction: column;
     > * {
       width: 100%;
@@ -179,10 +177,17 @@ h2 {
 
 @media (max-width: 780px) {
   section {
-    // border: 1px solid orange;
+    border: 1px solid orange;
   }
 
   .hide-mobile {
     display: none !important;
   }
+}
+
+@media (max-width: 580px) {
+  section {
+    border-color: lightblue;
+}
+ 
 }

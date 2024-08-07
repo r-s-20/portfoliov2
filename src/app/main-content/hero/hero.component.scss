@@ -23,7 +23,8 @@ app-header {
 }
 
 .heroContent {
-  width: 100%;
+  width: 90%;
+  z-index: 5;
   @include dFlex($jc: space-around, $g: 1rem);
   .heroCenter {
     @include dFlex($fd: column, $g: 1rem);
@@ -69,7 +70,8 @@ app-header {
   color: $primary;
   white-space: nowrap;
   font-size: 2rem;
-  width: 200%;
+  width: 100%;
+  min-width: 100%;
   @include dFlex($jc: space-evenly);
   span {
     white-space: nowrap;
@@ -78,6 +80,16 @@ app-header {
 
 .animate {
   animation: marqueeBasic linear 10s infinite;
+}
+
+.lineContainer {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include dFlex($jc: space-between);
+  padding: inherit;
 }
 
 .heroLine {
@@ -126,7 +138,8 @@ app-header {
     .heroLinkGreen {
       display: none;
     }
-    .heroLinkWhite, .dotChecked {
+    .heroLinkWhite,
+    .dotChecked {
       display: unset;
     }
   }
@@ -135,4 +148,52 @@ app-header {
 .separatorRight {
   border-left: 1px solid rgba(255, 255, 255, 0.7);
   height: 25vh;
+}
+
+@media (max-width: 1000px) {
+  .marquee {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .heroContent {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 5rem;
+    }
+  }
+
+  .marqueeBackground {
+    bottom: 5%;
+  }
+
+  .separatorRight {
+    height: 12vh;
+  }
+
+  .separatorLeft {
+    height: 15vh;
+  }
+
+  .marquee {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .heroContent {
+    h1 {
+      font-size: 1.3rem;
+    }
+    h2 {
+      font-size: 4rem;
+    }
+  }
+
+  .buttonContainer {
+    @include dFlex($fd: column);
+  }
 }
