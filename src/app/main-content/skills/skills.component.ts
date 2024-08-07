@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { SkillIconComponent } from './skill-icon/skill-icon.component';
 
 interface skill {
   name: string;
@@ -9,7 +8,7 @@ interface skill {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [SkillIconComponent],
+  imports: [],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
