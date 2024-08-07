@@ -163,7 +163,7 @@ h2 {
 @media (max-width: 1000px) {
   section {
     padding: 0 2rem;
-    border: 1px solid pink;
+    // border: 1px solid pink;
     flex-direction: column;
     > * {
       width: 100%;
@@ -179,7 +179,7 @@ h2 {
 
 @media (max-width: 780px) {
   section {
-    border: 1px solid orange;
+    // border: 1px solid orange;
   }
 
   .hide-mobile {

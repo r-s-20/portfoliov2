@@ -1,1 +1,25 @@
-<nav class="showMobile allGreen">mobile Navbar</nav>
+<div class="burgerMenu" (click)="toggleMenu()">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</div>
+
+@if(showMenu) {
+<div class="curtain" (click)="closeMenu()"></div>
+<div class="headerMenu">
+  <a (click)="closeMenu()" href="#about">About me </a>
+  <a (click)="closeMenu()" href="#skills">Skills </a>
+  <a (click)="closeMenu()" href="#portfolio">Portfolio </a>
+  <hr>
+  <span>Animation</span>
+  <div class="animationContainer" (click)="toggleAnimation()">
+    <span [ngClass]="{animationSelected: heroAnimation}">ON</span>
+    <span [ngClass]="{animationSelected: !heroAnimation}">OFF</span>
+  </div>
+  <span>Language</span>
+  <div class="langSwitchContainer" (click)="toggleLang()">
+    <span [ngClass]="{ langSelected: lang == 'EN' }">EN</span>
+    <span [ngClass]="{ langSelected: lang == 'DE' }">DE</span>
+  </div>
+</div>
+}
