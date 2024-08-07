@@ -80,7 +80,6 @@ app-header {
 .heroLine {
   height: 100vh;
   @include dFlex($fd: column, $jc: flex-end);
-  
 }
 
 .arrowDown {
@@ -106,8 +105,27 @@ app-header {
   }
 }
 
-.heroLink:hover {
-  filter: saturate(0);
+.heroLink {
+  position: relative;
+  @include dFlex();
+  transition: all 2s ease-in-out;
+  .heroLinkWhite {
+    display: none;
+  }
+  .dotChecked {
+    position: absolute;
+    left: 2.5rem;
+    display: none;
+  }
+
+  &:hover {
+    .heroLinkGreen {
+      display: none;
+    }
+    .heroLinkWhite, .dotChecked {
+      display: unset;
+    }
+  }
 }
 
 .separatorRight {

@@ -3,9 +3,21 @@
 nav {
   @include dFlex($jc: space-between, $g: 2rem);
   a {
+    position: relative;
     font-size: 1.5rem;
     transition: all 100ms ease-in-out;
+    @include dFlex();
+    .dotChecked {
+      position: absolute;
+      top: 2rem;
+      display: none;
+    }
     &:hover {
+      .dotChecked {
+        display: unset;
+      }
+    }
+    &:active {
       color: $primary;
     }
   }

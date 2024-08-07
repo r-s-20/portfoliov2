@@ -1,9 +1,11 @@
 <nav>
   <div class="langSwitchContainer" (click)="toggleLang()">
-    <span [ngClass]="{langSelected:lang=='EN'}">EN</span>
-    <span [ngClass]="{langSelected:lang=='DE'}">DE</span>
+    <span [ngClass]="{ langSelected: lang == 'EN' }">EN</span>
+    <span [ngClass]="{ langSelected: lang == 'DE' }">DE</span>
   </div>
-  <a href="#about">About me</a>
-  <a href="#skills">Skills</a>
-  <a href="#portfolio">Portfolio</a>
+  <a href="#about">About me <img class="dotChecked" src="img/icons/dot_checked.svg" alt="" /> </a>
+  <a href="#skills">Skills <img class="dotChecked" src="img/icons/dot_checked.svg" alt="" /> </a>
+  <a href="#portfolio"
+    >Portfolio <img class="dotChecked" src="img/icons/dot_checked.svg" alt="" />
+  </a>
 </nav>
