@@ -21,7 +21,7 @@ export class FeaturedService {
       skills: ['CSS', 'HTML', 'Javascript'],
       github: '',
       livetest: '',
-      image: 'img/previewJoin.svg',
+      image: 'img/previewSharky.svg',
       url: '',
     },
     {
@@ -30,7 +30,7 @@ export class FeaturedService {
       skills: ['Rest-API', 'CSS', 'HTML', 'Javascript'],
       github: '',
       livetest: '',
-      image: 'img/previewJoin.svg',
+      image: 'img/previewPokedex.svg',
       url: '',
     },
   ];

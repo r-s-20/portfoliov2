@@ -12,12 +12,13 @@ h3 {
 .iconContainer {
   width: 60%;
   max-width: 740px;
-  @include dFlex($jc: space-between, $g: 5rem);
+  @include dFlex($jc: space-evenly, $g: 5rem);
   flex-wrap: wrap;
   padding: 0 3rem;
 
   .iconElement {
     @include dFlex($fd: column);
+    width: 5rem;
     img {
       transition: all 75ms ease-in-out;
       &:hover {
@@ -30,12 +31,6 @@ h3 {
 .outerText {
   @include dFlex($fd: column, $ai: flex-start);
   width: 45%;
-  // margin-top: 20%;
-  span {
-    color: $primary;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
 }
 
 .textContainer {

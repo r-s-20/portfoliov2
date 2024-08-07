@@ -13,11 +13,6 @@ img {
   @include dFlex($fd: column, $ai: flex-start);
   width: 45%;
   margin-top: 20%;
-  span {
-    color: $primary;
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
 }
 
 .aboutContent {

@@ -67,14 +67,17 @@ app-header {
 
 .marquee {
   color: $primary;
+  white-space: nowrap;
   font-size: 2rem;
-  // position: absolute;
-  width: 100%;
+  width: 200%;
   @include dFlex($jc: space-evenly);
+  span {
+    white-space: nowrap;
+  }
 }
 
 .animate {
-  animation: marqueeBasic linear 20s infinite;
+  animation: marqueeBasic linear 10s infinite;
 }
 
 .heroLine {

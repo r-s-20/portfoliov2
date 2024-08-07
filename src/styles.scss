@@ -8,12 +8,12 @@ $fontSecondary: FiraCode, monospace;
 
 @font-face {
   font-family: Karla;
-  src: url(/fonts/karla/Karla-Regular.ttf);
+  src: url(../public/fonts/karla/Karla-Regular.ttf);
 }
 
 @font-face {
   font-family: FiraCode;
-  src: url(/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
+  src: url(../public/fonts/Fira_Code/FiraCode-VariableFont_wght.ttf);
 }
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $g: 16px) {
@@ -102,6 +102,7 @@ h2 {
   // }
   &:disabled {
     span {
+      animation: unset;
       color: rgba(255, 255, 255, 0.8);
     }
     border-color: rgba(255, 255, 255, 0.5);
@@ -116,8 +117,14 @@ h2 {
   padding: 2rem;
 }
 
+.sectionName {
+  color: $primary;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
 .d-none {
-  display: none!important;
+  display: none !important;
 }
 
 @keyframes loopText {
@@ -145,7 +152,8 @@ h2 {
 }
 
 @keyframes moveUpDown {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(20%);
   }
   50% {
