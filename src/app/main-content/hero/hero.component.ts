@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  animateHero: boolean = true;
+  animateHero: boolean = false;
 }

@@ -1,5 +1,4 @@
 $primary: rgba(61, 207, 182, 1);
-// $primary: rgb(214, 51, 251);
 $secondary: rgba(106, 215, 191, 1);
 $background: black;
 $fontColor: white;
@@ -163,10 +162,27 @@ h2 {
 
 @media (max-width: 1000px) {
   section {
-    // border: 1px solid white;
+    padding: 0 2rem;
+    border: 1px solid pink;
     flex-direction: column;
     > * {
       width: 100%;
     }
+  }
+}
+
+@media (min-width: 780px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 780px) {
+  section {
+    border: 1px solid orange;
+  }
+
+  .hide-mobile {
+    display: none !important;
   }
 }

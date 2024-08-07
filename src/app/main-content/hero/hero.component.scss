@@ -83,6 +83,7 @@ app-header {
 .heroLine {
   height: 100vh;
   @include dFlex($fd: column, $jc: flex-end);
+  width: fit-content !important;
 }
 
 .arrowDown {
