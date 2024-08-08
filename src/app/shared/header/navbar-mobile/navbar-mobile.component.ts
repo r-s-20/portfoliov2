@@ -1,14 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslationService } from '../../services/translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar-mobile',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './navbar-mobile.component.html',
   styleUrl: './navbar-mobile.component.scss',
 })
 export class NavbarMobileComponent {
+  translate = inject(TranslationService);
+
   showMenu: boolean = false;
   openMenu() {
     this.showMenu = true;
@@ -23,17 +27,7 @@ export class NavbarMobileComponent {
       this.showMenu = true;
     }
   }
-  lang: 'EN' | 'DE' = 'EN';
   heroAnimation: boolean = false;
 
-  toggleLang() {
-    if (this.lang == 'EN') {
-      this.lang = 'DE';
-    } else this.lang = 'EN';
-    console.log(this.lang);
-  }
-
-  toggleAnimation() {
-
-  }
+  toggleAnimation() {}
 }

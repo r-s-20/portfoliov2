@@ -17,9 +17,9 @@
     <span [ngClass]="{animationSelected: !heroAnimation}">OFF</span>
   </div>
   <span>Language</span>
-  <div class="langSwitchContainer" (click)="toggleLang()">
-    <span [ngClass]="{ langSelected: lang == 'EN' }">EN</span>
-    <span [ngClass]="{ langSelected: lang == 'DE' }">DE</span>
+  <div class="langSwitchContainer" (click)="translate.toggleLang()">
+    <span [ngClass]="{ langSelected: translate.lang == 'EN' }">EN</span>
+    <span [ngClass]="{ langSelected: translate.lang == 'DE' }">DE</span>
   </div>
 </div>
 }

@@ -12,18 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  lang: 'EN' | 'DE' = 'EN';
+  
   translate =inject(TranslationService);
-
-  toggleLang() {
-    if (this.lang == 'EN') {
-      this.lang = 'DE';
-      this.translate.switchLanguage('de');
-    } else {
-
-      this.lang = 'EN';
-      this.translate.switchLanguage('en');
-    }
-    console.log(this.lang);
-  }
+  
 }

@@ -1,7 +1,7 @@
 <nav>
-  <div class="langSwitchContainer" (click)="toggleLang()">
-    <span [ngClass]="{ langSelected: lang == 'EN' }">EN</span>
-    <span [ngClass]="{ langSelected: lang == 'DE' }">DE</span>
+  <div class="langSwitchContainer" (click)="translate.toggleLang()">
+    <span [ngClass]="{ langSelected: translate.lang == 'EN' }">EN</span>
+    <span [ngClass]="{ langSelected: translate.lang == 'DE' }">DE</span>
   </div>
   <a href="#about">{{'About me'|translate}}<img class="dotChecked" src="img/icons/dot_checked.svg" alt="" /> </a>
   <a href="#skills">Skills <img class="dotChecked" src="img/icons/dot_checked.svg" alt="" /> </a>
