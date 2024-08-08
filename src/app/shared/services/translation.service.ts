@@ -9,6 +9,7 @@ export class TranslationService {
   lang: 'EN' | 'DE' = 'EN';
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('en');
+    translate.use('en');
    }
 
    public switchLanguage(language:string):void {

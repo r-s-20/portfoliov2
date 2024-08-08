@@ -1,8 +1,16 @@
 {
-    "Developer": "Entwickler",
-    "About me": "Über mich",
-    "Check work": "Projekte ansehen",
-    "Contact me": "Kontakt aufnehmen",
-    "Available remote": "Home-Office möglich", 
-    "Open to work": "Suche Arbeit"
+  "Developer": "Entwickler",
+  "About me": "Über mich",
+  "Check work": "Projekte ansehen",
+  "Contact me": "Kontakt aufnehmen",
+  "Available remote": "Home-Office möglich",
+  "Open to work": "Suche Arbeit",
+
+  "Who I Am": "Wer ich bin",
+  "about-1": "Hi, ich bin ein Frontend-Entwickler aus Deutschland und wohne in der Nähe von Rostock. Die unendlichen Weiten des Internets haben mich schon immer fasziniert. Als Frontend-Entwickler erwecke ich Ihre Idee für eine ansprechende Webseite zum Leben.",
+  "about-l-1": "Ich bin ein aufgeschlossener Mensch und freue mich immer über persönliche Herausforderungen, um mein Wissen und meine Fähigkeiten stets auszubauen.",
+  "about-l-2": "Bei der Webentwicklung geht es nicht einfach darum, Code zu schreiben; es geht darum, kreative Lösungen für immer neue Probleme zu finden",
+
+  "Germany": "Deutschland",
+  "Imprint": "Impressum"
 }
