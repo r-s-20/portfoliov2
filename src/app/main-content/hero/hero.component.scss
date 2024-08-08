@@ -20,10 +20,11 @@ app-header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 50;
 }
 
-.heroContent {
-  width: 90%;
+section .heroContent {
+  width: fit-content;
   z-index: 5;
   @include dFlex($jc: space-around, $g: 1rem);
   .heroCenter {
@@ -79,10 +80,11 @@ app-header {
 }
 
 .animate {
-  animation: marqueeBasic linear 10s infinite;
+  animation: marqueeBasic linear 120s infinite;
 }
 
 .lineContainer {
+  width: 100%;
   position: absolute;
   z-index: 0;
   bottom: 0;
@@ -93,9 +95,13 @@ app-header {
 }
 
 .heroLine {
-  height: 100vh;
+  z-index: 20;
+  height: 70vh;
   @include dFlex($fd: column, $jc: flex-end);
   width: fit-content !important;
+  > * {
+    z-index: 10;
+  }
 }
 
 .arrowDown {
@@ -157,7 +163,7 @@ app-header {
 }
 
 @media (max-width: 780px) {
-  .heroContent {
+  section .heroContent {
     h1 {
       font-size: 2rem;
     }
@@ -184,7 +190,7 @@ app-header {
 }
 
 @media (max-width: 580px) {
-  .heroContent {
+  section .heroContent {
     h1 {
       font-size: 1.3rem;
     }
