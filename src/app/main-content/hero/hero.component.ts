@@ -13,5 +13,5 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class HeroComponent {
   translate=inject(TranslationService)
-  animateHero: boolean = true;
+  animateHero: boolean = false;
 }

@@ -51,11 +51,13 @@ section .heroContent {
 }
 
 .marqueeBackground {
+  // @include dFlex($jc:space-evenly);
   filter: blur(0.5);
   position: absolute;
   left: 0;
   bottom: 16%;
-  width: 200%;
+  min-width: 200% !important;
+  width: fit-content !important;
   white-space: no-wrap;
   height: 3rem;
   display: flex;
@@ -72,7 +74,7 @@ section .heroContent {
   white-space: nowrap;
   font-size: 2rem;
   width: 100%;
-  min-width: 100%;
+  // min-width: 100%;
   @include dFlex($jc: space-evenly);
   span {
     white-space: nowrap;
@@ -80,7 +82,7 @@ section .heroContent {
 }
 
 .animate {
-  animation: marqueeBasic linear 120s infinite;
+  animation: marqueeBasic linear 5s infinite;
 }
 
 .lineContainer {

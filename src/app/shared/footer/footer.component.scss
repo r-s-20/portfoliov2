@@ -20,12 +20,13 @@ a {
 
   font-weight: bold;
   @include dFlex($jc: space-between);
-  div {
-    @include dFlex($fd: column, $ai: flex-start);
-    span {
-      font-size: 1rem;
-      font-weight: 400;
-    }
+}
+
+.footer-info {
+  @include dFlex($fd: column, $ai: flex-start);
+  span {
+    font-size: 1rem;
+    font-weight: 400;
   }
 }
 
@@ -55,7 +56,20 @@ a {
 
 @media (max-width: 370px) {
   .footer-upper {
+    @include dFlex($fd: column);
     flex-direction: column;
     height: unset;
+  }
+
+  .footer-info {
+    align-items: center;
+    > * {
+      text-align: center;
+    }
+  }
+
+  .footer-copyright {
+    margin-left:0;
+    margin-right:0;
   }
 }
