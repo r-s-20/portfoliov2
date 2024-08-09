@@ -4,27 +4,22 @@
     <div class="foto-shadow"></div>
   </div>
   <div class="outerText">
-    <span class="sectionName">{{'Who I Am'|translate}}</span>
+    <span class="sectionName">{{ "Who I Am" | translate }}</span>
     <div class="aboutContent textBox">
-      <h2>{{"About me"|translate}}</h2>
-      <div>{{"about-1"|translate}}</div>
-      
+      <h2>{{ "About me" | translate }}</h2>
+      <div>{{ "about-1" | translate }}</div>
+
       <div>
         <ul>
-          <!-- <li>
-            I am open-minded and always looking for personal challenges to
-            constantly improve my knowledge and skills.
-          </li> -->
-          <li>{{"about-l-1"|translate}}</li>
-          <li>{{"about-l-2"|translate}}</li>
-
-          <!-- <li>
-            In my profession, programming isn't just about writing code; it's a
-            creative form of problem-solving. I take pride in my ability to
-            distill complex technical challenges into simple, user-friendly
-            solutions. This way, I help you achieve your goals and bring your
-            visions to life.
-          </li> -->
+          <li
+            [style.listStyleImage]="'url(\' ' + aboutList[1].url + '\')'">
+            <span>
+              {{ "about-l-1" | translate }}
+            </span>
+          </li>
+          <li [style.listStyleImage]="'url(' + aboutList[2].url + ')'">
+            <span>{{ "about-l-2" | translate }}</span>
+          </li>
         </ul>
       </div>
     </div>
