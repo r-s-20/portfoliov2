@@ -1,9 +1,8 @@
 <section id="portfolio">
   <span class="sectionName">Portfolio</span>
-  <h2>Featured Projects</h2>
+  <h2>{{"Featured Projects"|translate}}</h2>
   <p>
-    Explore a selection of my work here - interact with projects to see my
-    skills in action
+    {{"portfolio-1"|translate}}
   </p>
   <table>
     @for(project of featured.portfolios; track $index) {
@@ -11,7 +10,7 @@
       <td>{{ project.title }}</td>
       <td>
         @for(skill of project.skills; track $index) {
-        <span>{{ skill }}</span>
+        <span>{{ skill }}</span> 
         @if($index < project.skills.length-1) {
         <span class="projects-separator"> | </span>
 

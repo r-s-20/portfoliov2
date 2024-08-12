@@ -6,9 +6,13 @@
         <h3>{{ portfolio.title }}</h3>
       </div>
       <article>
-        <h5>What is this project about?</h5>
+        <h5>{{"project-about"|translate}}?</h5>
         <p>
-          {{ portfolio.description }}
+          @if(translate.lang=="EN") {
+            {{ portfolio.description }}
+          } @else if (translate.lang=="DE") {
+            {{ portfolio.descriptionDe }}
+          }
         </p>
       </article>
 
@@ -37,7 +41,7 @@
         alt="preview of Join, showing a Kanban-board with four columns and different tasks"
       />
       <button (click)="featured.showNext(num)" class="button-next">
-        Next project
+        {{"Next project"|translate}}
         <img src="img/icons/arrow-right-green.svg" alt="" />
         
       </button>

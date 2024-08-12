@@ -21,6 +21,11 @@
   "skills-invite": "Melden Sie sich gerne! Ich freue mich immer über die Gelegenheit, meine Fähigkeiten zu erweitern.",
   "skills-button": "Kontaktieren",
 
+  "Featured Projects": "Ausgewählte Projekte",
+  "portfolio-1": "Eine Auswahl meiner Arbeit - anklicken für die Detailansicht und den Link zur Live-Demo.",
+  "project-about": "Worum geht es in diesem Projekt",
+  "Next project": "Nächstes Projekt",
+
   "Contact": "Kontakt",
   "Lets work together": "Lassen Sie uns zusammenarbeiten",
   "Problem to solve": "Gibt es Probleme zu lösen",
@@ -33,7 +38,8 @@
   "How can I help you?": "Wie kann ich weiterhelfen?",
   "Read-privacy-1": "Ich habe die",
   "privacy policy": "Datenschutzerklärung",
-  "Read-privacy-2":"gelesen und bin mit der Verarbeitung meiner Daten einverstanden.",
+  "Read-privacy-2": "gelesen und bin mit der Verarbeitung meiner Daten einverstanden.",
+  "button-contact": "Absenden",
 
   "end": "Ende"
 }

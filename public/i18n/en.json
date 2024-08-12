@@ -21,6 +21,11 @@
   "skills-invite": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
   "skills-button": "Let's talk",
 
+  "Featured Projects": "Featured Projects",
+  "portfolio-1": "Explore a selection of my work here - interact with projects to see my skills in action",
+  "project-about": "What is this project about",
+  "Next project": "Next project",
+
   "Contact": "Contact me",
   "Lets work together": "Let's work together",
   "Problem to solve": "Got a problem to solve",
@@ -33,7 +38,8 @@
   "How can I help you?": "How can I help you?",
   "Read-privacy-1": "I've read the",
   "privacy policy": "privacy policy",
-  "Read-privacy-2":"and agree to the processing of my data as outlined.",
+  "Read-privacy-2": "and agree to the processing of my data as outlined.",
+  "button-contact": "Say hello ;)",
 
   "end": "end"
 }

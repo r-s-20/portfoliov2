@@ -9,6 +9,7 @@ export class FeaturedService {
     {
       title: 'Join',
       description: `Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.`,
+      descriptionDe: 'Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben im Team.',
       skills: ['CSS', 'HTML', 'Javascript', 'Firebase'],
       github: '',
       livetest: '',
@@ -18,6 +19,7 @@ export class FeaturedService {
     {
       title: 'Sharky',
       description: `2D Jump'n-Run Game. Help Sharky fight the big Orca!\n This project has a focus on Object-Oriented-Programming and usage of modules.`,
+      descriptionDe: `2d-Jump'n-Run Spiel.\n Hilf dem kleinen Hai Sharky, den großen Orka zu besiegen!`,
       skills: ['CSS', 'HTML', 'Javascript'],
       github: '',
       livetest: '',
@@ -26,7 +28,8 @@ export class FeaturedService {
     },
     {
       title: 'Pokedex',
-      description: `Get information on Pokemon provided by the pokedex API`,
+      description: `Get information on Pokemon provided by the pokedex API.`,
+      descriptionDe: 'Ein Pokédex basierend auf der pokedex API.',
       skills: ['Rest-API', 'CSS', 'HTML', 'Javascript'],
       github: '',
       livetest: '',
