@@ -1,32 +1,46 @@
 <section id="contact">
   <div class="textContent">
-    <span class="sectionName">{{"Contact"|translate}}</span>
-    <h2>Let's work together</h2>
-    <h3>Got a problem to solve?</h3>
+    <span class="sectionName">{{ "Contact" | translate }}</span>
+    <h2>{{ "Lets work together" | translate }}</h2>
+    <h3>{{ "Problem to solve" | translate }}?</h3>
     <p>
-      Contact me through this form, I am interested in hearing from you, knowing
-      your ideas and contributing to your projects with my work.
+      {{ "Contact-main" | translate }}
     </p>
-    <p>Need a Frontend developer? <b>Let's talk!</b></p>
+    <p>
+      {{ "Need a Frontend developer" | translate }}?
+      <b>{{ "Let's talk" | translate }}!</b>
+    </p>
   </div>
   <div class="contactForm">
     <table>
       <tr>
         <td>
-          <h3>What's your name?</h3>
+          <h3>{{ "What's your name?" | translate }}</h3>
+          @if(translate.lang=="EN"){
           <textarea placeholder="Your name"></textarea>
+          } @else if (translate.lang=="DE") {
+          <textarea placeholder="Ihr Name"></textarea>
+          }
         </td>
       </tr>
       <tr>
         <td>
-          <h3>What's your email?</h3>
+          <h3>{{ "What's your email?" | translate }}</h3>
+          @if(translate.lang=="EN"){
           <textarea placeholder="Your email"></textarea>
+          } @else if (translate.lang=="DE") {
+          <textarea placeholder="Ihre Email-Adresse"></textarea>
+          }
         </td>
       </tr>
       <tr>
         <td>
-          <h3>How can I help you?</h3>
+          <h3>{{ "How can I help you?" | translate }}</h3>
+          @if(translate.lang=="EN"){
           <textarea name="" id="" placeholder="Your message"></textarea>
+          } @else if (translate.lang=="DE") {
+          <textarea name="" id="" placeholder="Ihre Nachricht"></textarea>
+          }
         </td>
       </tr>
     </table>
@@ -76,8 +90,7 @@
       </svg>
 
       <span
-        >I've read the <a routerLink="imprint">privacy policy</a> and agree to the processing
-        of my data as outlined.</span
+        >{{"Read-privacy-1"|translate}} <a routerLink="imprint">{{"privacy policy"|translate}}</a> {{"Read-privacy-2"|translate}}</span
       >
     </div>
 

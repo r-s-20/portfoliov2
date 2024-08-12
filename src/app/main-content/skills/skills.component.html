@@ -1,21 +1,23 @@
 <section id="skills">
-  <!-- <div class="skillsContainer"> -->
   <div class="outerText">
-    <span class="sectionName">{{"Technologies"|translate}}</span>
+    <span class="sectionName">{{ "Technologies" | translate }}</span>
     <div class="textContainer textBox">
       <h2>Skill set</h2>
       <p>
-        My journey has involved working on diverse projects, employing a range
-        of frontend technologies and concepts. I am open to embracing new
-        technologies and methodologies to continously enhance my skills and stay
-        ahead in the ever-evolving landscape of web development.
+        {{ "skills-1" | translate }}
       </p>
-      <h3>Looking for <span>another skill</span>?</h3>
+      <h3>
+        {{ "Looking for" | translate }}
+        <span>{{ "another skill" | translate }}</span
+        >?
+      </h3>
       <p>
-        Feel free to contact me. I look forward to expanding on my previous
-        knowledge.
+        {{ "skills-invite" | translate }}
       </p>
-      <button class="button">Let's talk<span>Let's talk</span></button>
+      <button class="button">
+        {{ "skills-button" | translate
+        }}<span>{{ "skills-button" | translate }}</span>
+      </button>
     </div>
   </div>
   <div class="iconContainer">
@@ -26,5 +28,4 @@
     </div>
     }
   </div>
-  <!-- </div> -->
 </section>
