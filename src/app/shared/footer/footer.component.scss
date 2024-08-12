@@ -30,6 +30,12 @@ a {
   }
 }
 
+.logo {
+  width: 8rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
 .footer-copyright {
   font-size: 1.2rem;
   font-family: $fontSecondary;
@@ -54,7 +60,7 @@ a {
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 450px) {
   .footer-upper {
     @include dFlex($fd: column);
     flex-direction: column;

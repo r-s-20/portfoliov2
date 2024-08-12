@@ -12,5 +12,14 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-translate = inject(TranslationService)
+translate = inject(TranslationService);
+hovering = false;
+
+  hoverOn() {
+    this.hovering=true;
+  }
+
+  hoverOff(){
+    this.hovering=false;
+  }
 }

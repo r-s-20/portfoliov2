@@ -9,6 +9,12 @@ header {
     @include dFlex($jc: space-between);
 }
 
+.logo {
+  width: 7rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
 @media (max-width: 780px) {
     header {
       padding: 3rem 2rem;

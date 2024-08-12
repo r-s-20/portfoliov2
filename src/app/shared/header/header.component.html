@@ -1,5 +1,11 @@
 <header>
   <app-navbar class="hide-mobile all-green"></app-navbar>
-  <a routerLink="">RS</a>
+  <a (mouseover)="hoverOn()" (mouseout)="hoverOff()" routerLink="">
+    @if(hovering) {
+    <img class="logo" src="img/RS_Logo_nurKontur.png" alt="" />
+    } @else {
+    <img class="logo" src="img/RS_Logo_keineKontur.png" alt="" />
+    }
+  </a>
   <app-navbar-mobile class="show-mobile"></app-navbar-mobile>
 </header>

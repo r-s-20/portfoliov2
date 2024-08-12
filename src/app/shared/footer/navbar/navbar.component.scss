@@ -18,7 +18,12 @@ nav {
       .dotChecked {
         display: unset;
       }
-
     }
+  }
+}
+
+@media (max-width: 450px) {
+  nav {
+    align-items: center;
   }
 }
