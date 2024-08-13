@@ -112,3 +112,14 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+.popup-portfolio {
+  flex-direction: column-reverse;
+
+  .rightContainer, .leftContainer {
+    width: 90%;
+    max-height: 50%;
+  }
+}
+}

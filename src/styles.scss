@@ -169,13 +169,13 @@ h2 {
   }
 }
 
-@media (min-width: 780px) {
+@media (min-width: 850px) {
   .show-mobile {
     display: none !important;
   }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 850px) {
   section {
     border: 1px solid orange;
   }
