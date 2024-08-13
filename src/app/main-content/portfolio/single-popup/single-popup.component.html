@@ -1,17 +1,18 @@
 <div class="popup-curtain d-none" id="{{ num }}">
   <div class="popup-portfolio">
+    <div class="button-close" (click)="featured.closePopup(num)">x</div>
     <div class="leftContainer">
       <div class="popup-header">
-        <h4>0{{ num +1 }}</h4>
+        <h4>0{{ num + 1 }}</h4>
         <h3>{{ portfolio.title }}</h3>
       </div>
       <article>
-        <h5>{{"project-about"|translate}}?</h5>
+        <h5>{{ "project-about" | translate }}?</h5>
         <p>
           @if(translate.lang=="EN") {
-            {{ portfolio.description }}
+          {{ portfolio.description }}
           } @else if (translate.lang=="DE") {
-            {{ portfolio.descriptionDe }}
+          {{ portfolio.descriptionDe }}
           }
         </p>
       </article>
@@ -33,18 +34,14 @@
       </div>
     </div>
     <div class="rightContainer">
-      <button class="button-close" (click)="featured.closePopup(num)">
-        x
-      </button>
       <img
-        src="{{portfolio.image}}"
+        src="{{ portfolio.image }}"
         alt="preview of Join, showing a Kanban-board with four columns and different tasks"
       />
-      <button (click)="featured.showNext(num)" class="button-next">
-        {{"Next project"|translate}}
-        <img src="img/icons/arrow-right-green.svg" alt="" />
-        
-      </button>
+    </div>
+    <div (click)="featured.showNext(num)" class="button-next">
+      <span>{{ "Next project" | translate }}</span>
+      <img src="img/icons/arrow-right-green.svg" alt="" />
     </div>
   </div>
 </div>

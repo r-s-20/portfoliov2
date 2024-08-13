@@ -27,9 +27,9 @@ export class FeaturedService {
       url: '',
     },
     {
-      title: 'Pokedex',
-      description: `Get information on Pokemon provided by the pokedex API.`,
-      descriptionDe: 'Ein Pokédex basierend auf der pokedex API.',
+      title: 'Pokédex',
+      description: `Get information on Pokemon provided by the PokéAPI.`,
+      descriptionDe: 'Ein Pokédex basierend auf der PokéAPI.',
       skills: ['Rest-API', 'CSS', 'HTML', 'Javascript'],
       github: '',
       livetest: '',
