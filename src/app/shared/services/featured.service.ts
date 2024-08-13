@@ -50,7 +50,6 @@ export class FeaturedService {
 
   showNext(popupId: number) {
     let newId = this.findNext(popupId);
-    console.log('show next works', newId);
     this.closePopup(popupId);
     this.showPopup(newId);
   }
