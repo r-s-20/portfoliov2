@@ -34,6 +34,10 @@ h3 {
   width: 45%;
 }
 
+.skills-button {
+  font-family: $fontMain;
+}
+
 .textContainer {
   width: 100%;
   h3 {
@@ -41,6 +45,39 @@ h3 {
     font-family: $fontSecondary;
     span {
       color: $secondary;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .textContainer {
+    p {
+      text-align: justify;
+    }
+  }
+
+  .iconContainer {
+    padding: 0;
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .iconContainer {
+    gap: 3rem;
+    .iconElement {
+      width: 3rem;
+      img {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .textContainer {
+    p {
+      font-size: 0.95rem;
     }
   }
 }
