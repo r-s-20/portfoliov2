@@ -12,7 +12,8 @@ section {
 
 .textContent {
   width: 50%;
-  b, span {
+  b,
+  span {
     color: $primary;
   }
   h3 {
@@ -58,6 +59,11 @@ table {
     &::placeholder {
       color: white;
       opacity: 0.8;
+    }
+    &.errorColor {
+      &::placeholder {
+        color: rgba(236, 123, 123, 0.8);
+      }
     }
   }
 }

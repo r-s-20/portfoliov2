@@ -4,11 +4,12 @@ import { TranslationService } from '../../shared/services/translation.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [RouterModule, TranslateModule, FormsModule],
+  imports: [RouterModule, CommonModule, TranslateModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })
@@ -37,6 +38,10 @@ export class ContactComponent {
     },
   };
 
+  checkModel(model: NgModel) {
+    return model.valid;
+  }
+
   togglePolicyCheck() {
     if (this.policyChecked) {
       this.policyChecked = false;
@@ -46,59 +51,55 @@ export class ContactComponent {
   }
 
   getPlaceholderName(name: NgModel) {
-    if (this.translate.lang == 'EN') {
-      if (!name.valid && name.touched) {
-        return 'Please enter a name';
+    if (!name.valid && name.touched) {
+      if (this.translate.lang == 'DE') {
+        return 'Bitte einen Namen eingeben';
       }
-      return 'Your name';
-    } else if (this.translate.lang == 'DE') {
-      if (!name.valid && name.touched) {
-        return 'Bitte eine Nachricht eingeben';
-      }
+      return 'ERROR';
+    }
+    if (this.translate.lang == 'DE') {
       return 'Ihre Nachricht';
     }
     return 'Your name';
   }
 
   getPlaceholderMessage(message: NgModel) {
-    if (this.translate.lang == 'EN') {
-      if (!message.valid && message.touched) {
-        return 'Please enter a message';
-      }
-      return 'Your message';
-    } else if (this.translate.lang == 'DE') {
-      if (!message.valid && message.touched) {
+    if (!message.valid && message.touched) {
+      if (this.translate.lang == 'DE') {
         return 'Bitte eine Nachricht eingeben';
       }
+      return 'Please enter e message';
+    }
+    if (this.translate.lang == 'DE') {
       return 'Ihre Nachricht';
     }
     return 'Your message';
   }
 
   getPlaceholderEmail(email: NgModel) {
-    if (this.translate.lang == 'EN') {
-      if (!email.valid && email.touched) {
-        return 'Please enter a valid email-address';
-      }
-      return 'Your email';
-    } else if (this.translate.lang == 'DE') {
-      if (!email.valid && email.touched) {
+    if (!email.valid && email.touched) {
+      if (this.translate.lang == 'DE') {
         return 'Bitte eine gültige Email-Adresse eingeben';
       }
+      return "Oops! Looks like something's wrong with that email!";
+    }
+    if (this.translate.lang == 'DE') {
       return 'Ihre Email';
     }
     return 'Your email';
   }
 
-  submitData(ngForm: NgForm) {
-    console.log(this.contactData);
-
+  submitData(ngForm: NgForm, email: NgModel, name: NgModel, message: NgModel) {
     if (!this.mailTest) {
       this.http
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            // ngForm.resetForm();
+            ngForm.resetForm();
+            name.reset();
+            email.reset();
+            message.reset();
+            this.policyChecked=false;
             alert(
               'Thank you for your mail! I will get back to you as soon as possible.'
             );
@@ -109,8 +110,15 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else {
-      console.log('running on locale server - not sending');
       ngForm.resetForm();
+      name.reset();
+      email.reset();
+      message.reset();
+      this.policyChecked=false;
+      console.log('running on locale server - not sending');
+      alert(
+        'Thank you for your mail! I will get back to you as soon as possible.'
+      );
     }
   }
 }

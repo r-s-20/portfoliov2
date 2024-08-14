@@ -13,7 +13,7 @@
   </div>
   <form
     class="contactForm"
-    (ngSubmit)="submitData(contactForm)"
+    (ngSubmit)="submitData(contactForm, email, name, message)"
     #contactForm="ngForm"
   >
     <table>
@@ -26,6 +26,7 @@
             [ngModelOptions]="{ standalone: true }"
             placeholder="{{ getPlaceholderName(name) }}"
             required
+            [ngClass]="{ errorColor: !name.valid && name.touched }"
           ></textarea>
         </td>
       </tr>
@@ -39,6 +40,7 @@
             required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
             placeholder="{{ getPlaceholderEmail(email) }}"
+            [ngClass]="{ errorColor: !email.valid && email.touched }"
           ></textarea>
         </td>
       </tr>
@@ -54,6 +56,7 @@
             id="message"
             required
             placeholder="{{ getPlaceholderMessage(message) }}"
+            [ngClass]="{ errorColor: !message.valid && message.touched }"
           >
           </textarea>
         </td>
@@ -112,7 +115,7 @@
     </div>
 
     @if(email.valid && policyChecked && name.valid && message.valid) {
-    <button (click)="submitData(contactForm)" class="button">
+    <button class="button">
       {{ "button-contact" | translate
       }}<span>{{ "button-contact" | translate }}</span>
     </button>
