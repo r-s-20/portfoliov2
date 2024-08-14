@@ -3,9 +3,14 @@
 section {
   flex-direction: column;
   gap: 2rem;
-  h2 {
-    font-size: 2rem;
-  }
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 .outerContainer {
@@ -16,6 +21,7 @@ section {
 
 .textBoxContainer {
   @include dFlex($jc: space-between, $g: 2rem);
+  padding-top: 2rem;
   width: 150%;
   left: -25%;
   position: relative;
@@ -23,8 +29,8 @@ section {
 
 .quoteIcon {
   position: absolute;
-  top: 0;
-  left: 30%;
+  top: -1.6rem;
+  left: -3.2rem;
   z-index: 10;
 }
 
@@ -45,9 +51,48 @@ section {
   }
 }
 
+.partnerContainer {
+  @include dFlex($jc: space-between);
+  width: 100%;
+}
+
+.separator {
+  border-top: 1px solid rgba(white,0.7);
+  flex:1;
+}
+
 .arrowContainer {
   @include dFlex();
   > img {
     cursor: pointer;
+  }
+}
+
+@media (max-width: 850px) {
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .textBoxContainer {
+    width: 200%;
+    left: -50%;
+  }
+}
+
+@media (max-width: 570px) {
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .textBoxContainer {
+    gap: 1rem;
+    width: 220%;
+    left: -60%;
+  }
+
+  .quoteIcon {
+    width: 80px;
+    object-fit: cover;
+    left: -2.5rem;
   }
 }

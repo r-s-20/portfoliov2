@@ -196,6 +196,10 @@ h2 {
 }
 
 @media (max-width: 440px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   h2 {
     font-size: 3rem;
   }
@@ -203,8 +207,8 @@ h2 {
 
 @media (max-width: 370px) {
   section {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   h2 {
     font-size: 2.3rem;

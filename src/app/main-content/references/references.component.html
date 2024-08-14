@@ -2,36 +2,51 @@
   <h2>What my colleages say about me</h2>
   <div class="outerContainer">
     <div class="textBoxContainer">
+      @for (reference of references; track $index) { @if(currentRef == $index) {
+
       <div class="textBox">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-        voluptas nemo voluptates omnis dolorem inventore repellendus neque amet
-        dolor ipsum voluptatum eos incidunt, temporibus delectus sit molestias
-        dolores, quibusdam laudantium.
-        <h2>Ref1</h2>
+        <div class="partnerContainer">
+          <div class="separator"></div>
+          {{ references[getPreviousIndex()].quote }}
+        </div>
+        <h3>{{ references[getPreviousIndex()].partner }}</h3>
       </div>
-      <img class="quoteIcon" src="img/icons/quotes.svg" alt="" />
+
       <div class="textBox">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure
-        doloremque itaque eligendi asperiores magnam ratione cum voluptas
-        adipisci! Modi et adipisci sit officia harum, possimus nostrum illo
-        consectetur facere quos?
-        <h2>Ref2</h2>
+        <img class="quoteIcon" src="img/icons/quotes.svg" alt="" />
+        {{ reference.quote }}
+        <div class="partnerContainer">
+          <div class="separator"></div>
+          <h3>{{ reference.partner }}</h3>
+        </div>
       </div>
+
       <div class="textBox">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores neque
-        ipsa nesciunt doloribus optio voluptatum, quidem magni? Doloribus
-        voluptatum deleniti, impedit temporibus, quasi natus explicabo aliquam,
-        ab modi vitae iure.
-        <h2>Ref3</h2>
+        {{ references[getNextIndex()].quote }}
+        <div class="partnerContainer">
+          <div class="separator"></div>
+          <h3>{{ references[getNextIndex()].partner }}</h3>
+        </div>
       </div>
+
+      } }
     </div>
-    
   </div>
   <div class="arrowContainer">
-    <img src="img/icons/arrow_back.svg" alt="arrow to left" />
+    <img
+      src="img/icons/arrow_back.svg"
+      (click)="previousRef()"
+      alt="arrow to left"
+    />
+    @for (reference of references; track $index) { @if(currentRef == $index) {
     <img src="img/icons/circleGreen.svg" alt="dot - selected" />
+    } @else {
     <img src="img/icons/circleWhite.svg" alt="dot - not selected" />
-    <img src="img/icons/circleWhite.svg" alt="dot - not selected" />
-    <img src="img/icons/arrow_forward.svg" alt="arrow to right" />
+    } }
+    <img
+      src="img/icons/arrow_forward.svg"
+      (click)="nextRef()"
+      alt="arrow to right"
+    />
   </div>
 </section>
