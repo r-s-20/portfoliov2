@@ -11,36 +11,51 @@
       <b>{{ "Let's talk" | translate }}!</b>
     </p>
   </div>
-  <div class="contactForm">
+  <form
+    class="contactForm"
+    (ngSubmit)="submitData(contactForm)"
+    #contactForm="ngForm"
+  >
     <table>
       <tr>
         <td>
           <h3>{{ "What's your name?" | translate }}</h3>
-          @if(translate.lang=="EN"){
-          <textarea placeholder="Your name"></textarea>
-          } @else if (translate.lang=="DE") {
-          <textarea placeholder="Ihr Name"></textarea>
-          }
+          <textarea
+            #name="ngModel"
+            [(ngModel)]="contactData.name"
+            [ngModelOptions]="{ standalone: true }"
+            placeholder="{{ getPlaceholderName(name) }}"
+            required
+          ></textarea>
         </td>
       </tr>
       <tr>
         <td>
           <h3>{{ "What's your email?" | translate }}</h3>
-          @if(translate.lang=="EN"){
-          <textarea placeholder="Your email"></textarea>
-          } @else if (translate.lang=="DE") {
-          <textarea placeholder="Ihre Email-Adresse"></textarea>
-          }
+          <textarea
+            #email="ngModel"
+            [(ngModel)]="contactData.email"
+            [ngModelOptions]="{ standalone: true }"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            placeholder="{{ getPlaceholderEmail(email) }}"
+          ></textarea>
         </td>
       </tr>
       <tr>
         <td>
           <h3>{{ "How can I help you?" | translate }}</h3>
-          @if(translate.lang=="EN"){
-          <textarea name="" id="" placeholder="Your message"></textarea>
-          } @else if (translate.lang=="DE") {
-          <textarea name="" id="" placeholder="Ihre Nachricht"></textarea>
-          }
+          <textarea
+            #message="ngModel"
+            [(ngModel)]="contactData.message"
+            [ngModelOptions]="{ standalone: true }"
+            minlength="3"
+            name=""
+            id="message"
+            required
+            placeholder="{{ getPlaceholderMessage(message) }}"
+          >
+          </textarea>
         </td>
       </tr>
     </table>
@@ -90,16 +105,22 @@
       </svg>
 
       <span
-        >{{"Read-privacy-1"|translate}} <a routerLink="imprint">{{"privacy policy"|translate}}</a> {{"Read-privacy-2"|translate}}</span
+        >{{ "Read-privacy-1" | translate }}
+        <a routerLink="imprint">{{ "privacy policy" | translate }}</a>
+        {{ "Read-privacy-2" | translate }}</span
       >
     </div>
 
-    @if(policyChecked) {
-    <button class="button">{{"button-contact"|translate}}<span>{{"button-contact"|translate}}</span></button>
+    @if(email.valid && policyChecked && name.valid && message.valid) {
+    <button (click)="submitData(contactForm)" class="button">
+      {{ "button-contact" | translate
+      }}<span>{{ "button-contact" | translate }}</span>
+    </button>
     } @else {
     <button class="button" disabled="true">
-      {{"button-contact"|translate}}<span>{{"button-contact"|translate}}</span>
+      {{ "button-contact" | translate
+      }}<span>{{ "button-contact" | translate }}</span>
     </button>
     }
-  </div>
+  </form>
 </section>
