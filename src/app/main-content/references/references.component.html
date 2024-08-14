@@ -1,5 +1,5 @@
 <section>
-  <h2>{{"What my colleages say about me"|translate}}</h2>
+  <h2>{{ "What my colleages say about me" | translate }}</h2>
   <div class="outerContainer">
     <div class="textBoxContainer">
       @for (reference of references; track $index) { @if(currentRef == $index) {
@@ -7,26 +7,57 @@
       <div class="textBox">
         <div class="partnerContainer">
           <div class="separator"></div>
+          @if (translate.lang == "DE") {
+          {{ references[getPreviousIndex()].quoteDe }}
+          } @else if (translate.lang =="EN") {
           {{ references[getPreviousIndex()].quote }}
+          }
         </div>
-        <h3>{{ references[getPreviousIndex()].partner }}</h3>
+        <h3>
+          @if (translate.lang == "DE") {
+          {{ references[getPreviousIndex()].partnerDe }}
+          } @else if (translate.lang =="EN") {
+          {{ references[getPreviousIndex()].partner }}
+          }
+        </h3>
       </div>
 
       <div class="textBox">
         <img class="quoteIcon" src="img/icons/quotes.svg" alt="" />
+        @if (translate.lang == "DE") {
+        {{ reference.quoteDe }}
+        } @else if (translate.lang =="EN") {
         {{ reference.quote }}
+        }
         <div class="partnerContainer">
           <div class="separator"></div>
-          <h3>{{ reference.partner }}</h3>
+
+          <h3>
+            @if (translate.lang == "DE") {
+            {{ reference.partnerDe }}
+            } @else if (translate.lang =="EN") {
+            {{ reference.partner }}
+            }
+          </h3>
         </div>
       </div>
 
       <div class="textBox">
-        {{ references[getNextIndex()].quote }}
         <div class="partnerContainer">
           <div class="separator"></div>
-          <h3>{{ references[getNextIndex()].partner }}</h3>
+          @if (translate.lang == "DE") {
+          {{ references[getPreviousIndex()].quoteDe }}
+          } @else if (translate.lang =="EN") {
+          {{ references[getPreviousIndex()].quote }}
+          }
         </div>
+        <h3>
+          @if (translate.lang == "DE") {
+          {{ references[getNextIndex()].partnerDe }}
+          } @else if (translate.lang =="EN") {
+          {{ references[getNextIndex()].partner }}
+          }
+        </h3>
       </div>
 
       } }

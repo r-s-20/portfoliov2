@@ -1,5 +1,18 @@
 @import "../../styles.scss";
 
+.legalContent {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h2, h3 {
+  hyphens: auto;
+}
+
+ul {
+  list-style: none;
+}
+
 .legalHeader {
   width: 100%;
   @include dFlex();

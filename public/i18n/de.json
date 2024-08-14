@@ -29,7 +29,7 @@
   "What my colleages say about me": "Was Kolleg*innen über mich sagen",
 
   "Contact": "Kontakt",
-  "Lets work together": "Lassen Sie uns ein Projekt starten",
+  "Lets work together": "Lassen Sie uns zusammenarbeiten",
   "Problem to solve": "Gibt es Probleme zu lösen",
   "Need a Frontend developer": "Frontend Developer gesucht",
   "Let's talk": "Melden Sie sich gerne",
@@ -42,6 +42,9 @@
   "privacy policy": "Datenschutzerklärung",
   "Read-privacy-2": "gelesen und bin mit der Verarbeitung meiner Daten wie angegeben einverstanden.",
   "button-contact": "Absenden",
+
+  "Legal information": "Rechtliche Informationen",
+  "Privacy policy": "Datenschutzerklärung",
 
   "end": "Ende"
 }

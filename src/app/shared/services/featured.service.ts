@@ -33,7 +33,7 @@ export class FeaturedService {
       skills: ['Rest-API', 'CSS', 'HTML', 'Javascript'],
       github: '',
       livetest: '',
-      image: 'img/previewPokedex.svg',
+      image: 'img/previewPokedex.png',
       url: '',
     },
   ];

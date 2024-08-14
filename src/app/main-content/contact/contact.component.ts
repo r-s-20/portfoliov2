@@ -17,8 +17,9 @@ export class ContactComponent {
   http = inject(HttpClient);
   translate = inject(TranslationService);
 
-  mailTest = false;
+  mailTest = true;
 
+  showConfirmation = false;
   policyChecked = false;
   formVerified = false;
   contactData: { name: string; email: string; message: string } = {
@@ -78,10 +79,11 @@ export class ContactComponent {
 
   getPlaceholderEmail(email: NgModel) {
     if (!email.valid && email.touched) {
-      if (this.translate.lang == 'DE') {
-        return 'Bitte eine gültige Email-Adresse eingeben';
-      }
-      return "Oops! Looks like something's wrong with that email!";
+      // if (this.translate.lang == 'DE') {
+      //   return 'Bitte eine gültige Email-Adresse eingeben';
+      // }
+      // return "Oops! Looks like something's wrong with that email!";
+      return '';
     }
     if (this.translate.lang == 'DE') {
       return 'Ihre Email';
@@ -100,15 +102,7 @@ export class ContactComponent {
             email.reset();
             message.reset();
             this.policyChecked = false;
-
-            if (this.translate.lang == 'DE') {
-              alert(
-                'Danke für die Nachricht! Ich melde mich so bald wie möglich zurück!'
-              );
-            } else
-              alert(
-                'Thank you for your mail! I will get back to you as soon as possible.'
-              );
+            this.showConfirmation=true;
           },
           error: (error) => {
             console.error(error);
@@ -121,15 +115,8 @@ export class ContactComponent {
       email.reset();
       message.reset();
       this.policyChecked = false;
+      this.showConfirmation=true;
       console.log('running on locale server - not sending');
-      if (this.translate.lang == 'DE') {
-        alert(
-          'Danke für die Nachricht! Ich melde mich so bald wie möglich zurück!'
-        );
-      } else
-        alert(
-          'Thank you for your mail! I will get back to you as soon as possible.'
-        );
     }
   }
 }

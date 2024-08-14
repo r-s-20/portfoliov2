@@ -10,6 +10,11 @@ section {
   }
 }
 
+h2,
+h3 {
+  hyphens: auto;
+}
+
 .textContent {
   width: 50%;
   b,
@@ -27,6 +32,7 @@ table {
   tr {
     border-collapse: collapse;
     td {
+      position: relative;
       border-top: 1px solid $primary;
     }
   }
@@ -90,6 +96,41 @@ table {
 
 span {
   width: 90%;
+}
+
+.emailError {
+  opacity: 0.8;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: rgba(236, 123, 123, 0.8);
+}
+
+.popup {
+  position: fixed;
+}
+
+.popupCurtain {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(black, 0.2);
+}
+
+section .popupMessage {
+  border: 1px solid $primary;
+  text-align: center;
+  top: 30%;
+  right: 20%;
+  left: 20%;
+  border-radius: 30px;
+  width: 60vw;
+  height: 30vh;
+  background: linear-gradient(to left bottom, rgb(22, 73, 65), 45%, black);
+  @include dFlex($fd: column, $g:3rem);
+  z-index: 100;
 }
 
 @media (max-width: 1000px) {
