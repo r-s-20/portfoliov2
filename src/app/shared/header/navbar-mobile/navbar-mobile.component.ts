@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { AnimationsService } from '../../services/animations.service';
 
 @Component({
   selector: 'app-navbar-mobile',
@@ -12,6 +13,9 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class NavbarMobileComponent {
   translate = inject(TranslationService);
+  animations=inject(AnimationsService);
+
+  heroAnimation = this.animations.animateHero;
 
   showMenu: boolean = false;
   openMenu() {
@@ -27,7 +31,7 @@ export class NavbarMobileComponent {
       this.showMenu = true;
     }
   }
-  heroAnimation: boolean = false;
-
-  toggleAnimation() {}
+  toggleAnimation() {
+    this.animations.toggleAnimation();
+  }
 }

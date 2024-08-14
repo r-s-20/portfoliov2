@@ -55,7 +55,7 @@ export class ContactComponent {
       if (this.translate.lang == 'DE') {
         return 'Bitte einen Namen eingeben';
       }
-      return 'ERROR';
+      return 'Oops! Looks like your name is missing!';
     }
     if (this.translate.lang == 'DE') {
       return 'Ihre Nachricht';
@@ -99,10 +99,16 @@ export class ContactComponent {
             name.reset();
             email.reset();
             message.reset();
-            this.policyChecked=false;
-            alert(
-              'Thank you for your mail! I will get back to you as soon as possible.'
-            );
+            this.policyChecked = false;
+
+            if (this.translate.lang == 'DE') {
+              alert(
+                'Danke für die Nachricht! Ich melde mich so bald wie möglich zurück!'
+              );
+            } else
+              alert(
+                'Thank you for your mail! I will get back to you as soon as possible.'
+              );
           },
           error: (error) => {
             console.error(error);
@@ -114,11 +120,16 @@ export class ContactComponent {
       name.reset();
       email.reset();
       message.reset();
-      this.policyChecked=false;
+      this.policyChecked = false;
       console.log('running on locale server - not sending');
-      alert(
-        'Thank you for your mail! I will get back to you as soon as possible.'
-      );
+      if (this.translate.lang == 'DE') {
+        alert(
+          'Danke für die Nachricht! Ich melde mich so bald wie möglich zurück!'
+        );
+      } else
+        alert(
+          'Thank you for your mail! I will get back to you as soon as possible.'
+        );
     }
   }
 }

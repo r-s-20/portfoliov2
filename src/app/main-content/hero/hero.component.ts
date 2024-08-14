@@ -3,6 +3,7 @@ import { HeaderComponent } from '../../shared/header/header.component';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../../shared/services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { AnimationsService } from '../../shared/services/animations.service';
 
 @Component({
   selector: 'app-hero',
@@ -12,6 +13,6 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
-  translate=inject(TranslationService)
-  animateHero: boolean = false;
+  translate=inject(TranslationService);
+  animateHero=inject(AnimationsService).animateHero;
 }
