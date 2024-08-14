@@ -17,7 +17,7 @@ export class ContactComponent {
   http = inject(HttpClient);
   translate = inject(TranslationService);
 
-  mailTest = true;
+  mailTest = false;
 
   policyChecked = false;
   formVerified = false;
@@ -28,7 +28,7 @@ export class ContactComponent {
   };
 
   post = {
-    endPoint: 'http://r-s-dev.de/mailTestProject/sendMail.php',
+    endPoint: 'https://r-s-dev.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

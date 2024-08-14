@@ -1,0 +1,10 @@
+@import "../../styles.scss";
+
+.legalHeader {
+  width: 100%;
+  @include dFlex();
+}
+
+a:hover {
+  color: $primary;
+}
