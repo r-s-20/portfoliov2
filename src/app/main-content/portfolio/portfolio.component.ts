@@ -14,4 +14,13 @@ import { TranslateModule } from '@ngx-translate/core';
 export class PortfolioComponent {
   featured = inject(FeaturedService);
   translate = inject(TranslationService);
+  hovering?: number;
+
+  hoverOn(index: number) {
+    this.hovering = index;
+  }
+
+  hoverOff(){
+    this.hovering = -1;
+  }
 }

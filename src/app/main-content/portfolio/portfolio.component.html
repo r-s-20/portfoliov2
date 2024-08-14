@@ -4,21 +4,31 @@
   <p>
     {{ "portfolio-1" | translate }}
   </p>
-  <table>
-    @for(project of featured.portfolios; track $index) {
-    <tr (click)="featured.showPopup($index)">
-      <td>{{ project.title }}</td>
-      <td>
-        @for(skill of project.skills; track $index) {
-        <span>{{ skill }}</span>
-        @if($index < project.skills.length-1) {
-        <span class="projects-separator">|</span>
+  <div class="tablePortfolio">
+    <table>
+      @for(project of featured.portfolios; track $index) {
+      <tr
+        (click)="featured.showPopup($index)"
+        (mouseover)="hoverOn($index)"
+        (mouseout)="hoverOff()"
+      >
+        <td>{{ project.title }}</td>
+        <td>
+          @for(skill of project.skills; track $index) {
+          <span>{{ skill }}</span>
+          @if($index < project.skills.length-1) {
+          <span class="projects-separator">|</span>
 
-        } }
-      </td>
-    </tr>
-    }
-  </table>
+          } }
+        </td>
+      </tr>
+      }
+    </table>
+    @for(project of featured.portfolios; track $index) { @if(hovering==$index) {
+    <img src="{{ project.image }}" alt="" class="project-image hide-mobile" />
+    } }
+  </div>
+
   @for(project of featured.portfolios; track $index) {
   <app-single-popup [portfolio]="project" [num]="$index"></app-single-popup>
   }

@@ -5,11 +5,16 @@ section {
   align-items: flex-start;
 }
 
+.tablePortfolio {
+  width: 100%;
+  @include dFlex($jc: space-between);
+}
+
 table {
   @include dFlex($fd: column, $g: 0);
   border-collapse: collapse;
   cursor: pointer;
-  width: 70%;
+  width: 60%;
   font-size: 1.1rem;
   tr {
     width: 100%;
@@ -38,16 +43,28 @@ table {
   }
 }
 
+.project-image {
+  border-radius: 30px;
+  width: 35%;
+  object-fit: cover;
+}
+
 .projects-separator {
   color: $primary;
 }
 
-@media(max-width: 480px) {
+@media (max-width: 850px) {
+  table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
   table {
     tr {
       flex-direction: column;
       padding: 2.5rem 0;
-      td  {
+      td {
         padding: 0;
         width: 100%;
         &:last-child {
